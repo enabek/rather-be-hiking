@@ -1,0 +1,9 @@
+<h1>Hi, <%= @user.username %>!</h1>
+
+<h3>Your articles:</h3>
+<% @articles.each do |article| %>
+  <%= article.title %>
+<%end%>
+
+
+<h3>Your comments:</h3>
