@@ -1,0 +1,7 @@
+<h1>Posts:</h1>
+
+<% @articles.each do |article| %>
+  <h3><%= article.title %></h3>
+  <p><%= article.body %></p>
+  <p><%= article.writer.username %></p>
+<%end%>
