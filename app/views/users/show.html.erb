@@ -7,3 +7,6 @@
 
 
 <h3>Your comments:</h3>
+<% @comments.each do |comment| %>
+  <%= comment.body %> on <%= comment.article.title %>
+<%end%>

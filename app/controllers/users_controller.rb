@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @articles = @user.articles
-    @comment = @user.comments
+    @comments = @user.comments
   end
 
   def create
