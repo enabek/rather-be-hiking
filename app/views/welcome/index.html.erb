@@ -3,5 +3,5 @@
 <% @articles.each do |article| %>
   <h3><%= article.title %></h3>
   <p><%= article.body %></p>
-  <p><%= article.user.username %></p>
+  <p>Written on <%= article.created_at.strftime("%B ") + article.created_at.strftime("%d").to_i.ordinalize + ", " + article.created_at.strftime("%Y") %> by <%= link_to article.user.username, user_path(article.user_id) %></p>
 <%end%>
