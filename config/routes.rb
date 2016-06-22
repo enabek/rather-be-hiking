@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :articles do
-    resources :comments, :only => [:create]
+    resources :comments, :only => [:new, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
