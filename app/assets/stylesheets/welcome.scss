@@ -29,6 +29,15 @@
   color: #b34700;
 }
 
+ul li {
+  font-weight: 900;
+}
+
+.nav navbar-nav {
+  margin: 0 auto;
+  float: right;
+}
+
 .nav-links li {
   display: inline;
   padding: 20px;
@@ -36,8 +45,7 @@
 }
 
 .nav-links li a {
-  font-size: 1em;
-  font-weight: 900;
+  font-size: 1.2em;
 }
 
 p {
@@ -52,5 +60,13 @@ p {
 
 .new-article-link {
   font-size: 1.2em;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  margin-top: -20px;
 }
 

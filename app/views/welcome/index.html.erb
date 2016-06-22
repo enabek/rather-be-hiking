@@ -4,7 +4,11 @@
     <h3 class="main-article-link"><%= link_to article.title, article_path(article) %></h3>
     <p id="created-at"><%= article.created_at.strftime("%B ") + article.created_at.strftime("%d").to_i.ordinalize + ", " + article.created_at.strftime("%Y") %> by <%= link_to article.user.username, user_path(article.user_id) %></p>
     <p class="article-body"><%= article.body %></p>
-    <p><%= link_to article.comments.count, article_path(article) %> comments</p>
+    <% if article.comments.count == 1 %>
+      <p><%= link_to article.comments.count, article_path(article) %> comment</p>
+    <% else %>
+      <p><%= link_to article.comments.count, article_path(article) %> comments</p>
+    <% end %>
     <hr>
   <%end%>
 

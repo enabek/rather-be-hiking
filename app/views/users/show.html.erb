@@ -6,14 +6,22 @@
   <%end%>
 
 
-  <h3>Your articles:</h3>
-  <% @articles.each do |article| %>
+  <% if logged_in? && current_user == @user %>
+    <h3>Your articles:</h3>
+  <% else %>
+    <h3>Articles:</h3>
+  <% end %>
+    <% @articles.each do |article| %>
     <p class="comment-body-usr-show"><%= link_to article.title, article_path(article) %></p>
     <hr>
   <%end%>
 
 
-  <h3>Your comments:</h3>
+ <% if logged_in? && current_user == @user %>
+    <h3>Your comments:</h3>
+  <% else %>
+    <h3>Comments:</h3>
+  <% end %>
   <% @comments.each do |comment| %>
     <p class="comment-body-usr-show"><%= comment.body %> - <%= link_to comment.article.title, article_path(comment.article_id) %></p>
     <hr>
