@@ -29,6 +29,15 @@
   color: #b34700;
 }
 
+ul li {
+  float: right;
+}
+
+.nav navbar-nav {
+  margin: 0 auto;
+  float: right;
+}
+
 .nav-links li {
   display: inline;
   padding: 20px;
@@ -36,12 +45,29 @@
 }
 
 .nav-links li a {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 900;
 }
 
-.article-body {
-  font-size: 1em;
+p {
+  font-size: 1.1em;
 }
 
+#created-at {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+}
+
+.new-article-link {
+  font-size: 1.2em;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  margin-top: -20px;
+}
 
