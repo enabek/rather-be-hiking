@@ -1,5 +1,5 @@
 <div class="container">
-  <% if logged_in? %>
+  <% if logged_in? && current_user == @user %>
     <h1>Hi, <span class="username"><%= @user.username %></span></h1>
   <%else%>
     <h1><span class="username"><%= @user.username %></span></h1>
