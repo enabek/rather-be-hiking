@@ -10,4 +10,5 @@
 <% @comments.each do |comment| %>
   <p><%= comment.body %></p>
   <p>Written on <%= @article.created_at.strftime("%B ") + comment.created_at.strftime("%d").to_i.ordinalize + ", " + comment.created_at.strftime("%Y") %> by <%= link_to @article.user.username, user_path(@article.user_id) %></p>
+  <hr>
 <% end %>
