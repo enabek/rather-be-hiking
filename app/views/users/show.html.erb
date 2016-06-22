@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>Hi, <span class="username"><%= @user.username %></span>!</h1>
+  <% if logged_in? %>
+    <h1>Hi, <span class="username"><%= @user.username %></span></h1>
+  <%else%>
+    <h1><span class="username"><%= @user.username %></span></h1>
+  <%end%>
+
 
   <h3>Your articles:</h3>
   <% @articles.each do |article| %>
@@ -10,7 +15,7 @@
 
   <h3>Your comments:</h3>
   <% @comments.each do |comment| %>
-    <p class="comment-body-usr-show"><%= comment.body %> | <%= link_to comment.article.title, article_path(comment.article_id) %></p>
+    <p class="comment-body-usr-show"><%= comment.body %> - <%= link_to comment.article.title, article_path(comment.article_id) %></p>
     <hr>
   <%end%>
 </div>

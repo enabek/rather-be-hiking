@@ -2,14 +2,16 @@
 
   <% @articles.each do |article| %>
     <h3 class="main-article-link"><%= link_to article.title, article_path(article) %></h3>
-    <p class="article-body"><%= article.body %></p>
     <p id="created-at"><%= article.created_at.strftime("%B ") + article.created_at.strftime("%d").to_i.ordinalize + ", " + article.created_at.strftime("%Y") %> by <%= link_to article.user.username, user_path(article.user_id) %></p>
+    <p class="article-body"><%= article.body %></p>
     <p><%= link_to article.comments.count, article_path(article) %> comments</p>
     <hr>
   <%end%>
 
   <% if logged_in? %>
     <h4 class="new-article-link"><%= link_to "Add a new post!", new_article_path%></h4>
+  <% else %>
+    <h4 class="new-article-link"><%= link_to "Log in to add a new post!", login_path %></h4>
   <% end %>
 
 </div>
