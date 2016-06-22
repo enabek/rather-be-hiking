@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
+  include SessionsHelper
   def new
     @comment = Comment.new
-    @article = Article.find_by(id: [:article_id])
+    @article = Article.find_by(id: params[:article_id])
     @comment.user_id = current_user.id
     @comment.article_id = @article.id
   end
@@ -12,9 +13,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.article_id = @article.id
     if @comment.save
-      render
+      # render @article
     else
-      redirect
+      # redirect
     end
   end
 
