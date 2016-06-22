@@ -4,6 +4,7 @@
 
 .nav-links {
   list-style: none;
+  text-align: center;
 }
 
 #main-text {
@@ -22,3 +23,15 @@
 .main-article-link {
   font-weight: 900;
 }
+
+.nav-links li {
+  display: inline;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.nav-links li a {
+  font-size: 1em;
+  font-weight: 900;
+}
+
