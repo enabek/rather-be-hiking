@@ -40,8 +40,17 @@
   font-weight: 900;
 }
 
-.article-body {
-  font-size: 1em;
+p {
+  font-size: 1.1em;
 }
 
+#created-at {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+}
+
+.new-article-link {
+  font-size: 1.2em;
+}
 

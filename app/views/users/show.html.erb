@@ -10,7 +10,7 @@
 
   <h3>Your comments:</h3>
   <% @comments.each do |comment| %>
-    <p><%= comment.body %> on <%= link_to comment.article.title, article_path(comment.article_id) %></p>
+    <p><%= comment.body %> | <%= link_to comment.article.title, article_path(comment.article_id) %></p>
     <hr>
   <%end%>
 </div>
