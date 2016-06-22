@@ -1,8 +1,11 @@
-<h1>Register:</h1>
+<div class="container">
+  <h1>Register:</h1>
 
-<%= form_for(@user) do |f| %>
-      <p><%= f.text_field :username, placeholder: "username" %></p>
-      <p><%= f.password_field :password, placeholder: "password" %></p>
+  <%= form_for(@user) do |f| %>
+    <p><%= f.text_field :username, placeholder: "username" %></p>
+    <p><%= f.password_field :password, placeholder: "password" %></p>
 
-      <%= f.submit "Create my account" %>
-    <% end %>
+    <%= f.submit "Create my account", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
