@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Add a new comment:</h1>
+
+  <%= form_for [@article, @comment] do |f| %>
+    <%= f.label :body %>:
+      <%= f.text_area :body, class: "form-control", rows: "15", id: "comment" %><br>
+    <%= f.submit "submit", class: "btn btn-primary"   %>
+  <% end %>
+
+</div>

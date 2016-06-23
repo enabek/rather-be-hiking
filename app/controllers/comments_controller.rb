@@ -13,9 +13,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.article_id = @article.id
     if @comment.save
-      # render @article
+      redirect_to article_path(@article)
     else
-      # redirect
+      redirect_to new_article_comment(@article)
     end
   end
 
